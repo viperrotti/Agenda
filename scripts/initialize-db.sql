@@ -7,12 +7,18 @@ CREATE TABLE IF NOT EXISTS Professor (
 
 CREATE TABLE IF NOT EXISTS Agenda (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL,    
-    data DATETIME NOT NULL,
+    hora VARCHAR(255) NOT NULL,    
+    data VARCHAR(255) NOT NULL,
     professorId INT,
     FOREIGN KEY (ProfessorId) REFERENCES Professor(id)
 );
 
 INSERT INTO Professor (nome, url, materia) VALUES
-  ('Viviane', 'http://url1.com', 'Quimica'),
-  ('Renato', 'http://url2.com', 'Matematica')
+  ('Renata', 'img/Renata.jpg', 'Historia'),
+  ('Carla', 'img/Carla.jpg', 'Matematica'),
+  ('Paulo', 'img/Paulo.jpg', 'Fisica'),
+  ('Emanuel', 'img/Emanuel.jpg', 'Geografia'),
+  ('Barbara', 'img/Barbara.jpg', 'Quimica'),
+  ('Sergio', 'img/Sergio.jpg', 'Artes'),
+  ('Jessica', 'img/Jessica.jpg', 'Biologia'),
+  ('Marcio', 'img/Marcio.jpg', 'Ingles')

@@ -18,5 +18,22 @@ namespace AgendaDeAulas.Controllers
 
             await agendaRepository.AgendaAula(novaAgenda);
         }        
+    
+        // GET: api/<AgendaController>
+        [HttpGet]
+        public async Task<IEnumerable<Aula>> Get()
+        {
+            return await new AgendaRepository().GetAgenda();  
+        }       
+        
+        // DELETE: api/<AgendaController>
+        [HttpDelete]
+        public async Task Delete([FromBody] int id)
+        {
+            AgendaRepository agendaRepository = new AgendaRepository();
+
+            await agendaRepository.DeletaAula(id);
+        }  
+
     }
 }

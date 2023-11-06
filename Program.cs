@@ -15,7 +15,7 @@ namespace AgendaDeAulas
 
             builder.Services.AddCors(policyBuilder =>
                       policyBuilder.AddDefaultPolicy(policy =>
-                        policy.WithOrigins("*").AllowAnyHeader().AllowAnyHeader())
+                        policy.WithOrigins("*").AllowAnyHeader().AllowAnyMethod())
             );
 
             var app = builder.Build();
